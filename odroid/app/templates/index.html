@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart AC System</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">AC</div><div><strong>Smart AC System</strong><span>ROOM MONITORING</span></div></div>
+      <div class="nav-label">SENSORS</div>
+      <a class="nav-item active" href="#overview"><span>▦</span> Overview</a>
+      <a class="nav-item" href="#trends"><span>◉</span> DHT11 trends</a>
+      <a class="nav-item" href="#readings"><span>≡</span> Recent readings</a>
+      <div class="sidebar-bottom"><div class="mini-device"><span class="pulse"></span><div><b>Room 01</b><small>DHT11 + IR sensor</small></div></div><div class="sidebar-foot">SMART AC SYSTEM<br>ROOM DASHBOARD · V1.0</div></div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div><div class="breadcrumb">Workspace <span>/</span> Room 01</div><h1>Smart AC monitoring</h1><p class="subheading">Detect room entry and monitor temperature for efficient AC control.</p></div>
+        <div class="top-actions"><div class="demo-pill"><span></span> MONITORING ACTIVE</div><div class="avatar">A</div></div>
+      </header>
+
+      <section class="hero-strip">
+        <div class="hero-icon">⌂</div><div class="hero-copy"><b>Room 01</b><span>IR entry detection and DHT11 temperature monitoring</span></div>
+        <div class="hero-meta"><span class="status-dot"></span> Online</div>
+        <div class="hero-time">UPDATED <b id="lastUpdated">--:--:--</b></div>
+      </section>
+
+      <div class="section-heading"><div><h2>Live room readings</h2><p>Current values from the room sensors.</p></div><span class="small-tag">REFRESH · 5 SEC</span></div>
+      <section class="metric-grid">
+        <article class="metric-card temp-card"><div class="metric-top"><span class="metric-label">TEMPERATURE</span><span class="metric-icon orange">♨</span></div><div class="metric-value"><span id="temperature">24.5</span><small>°C</small></div><div class="metric-bottom"><span class="state-chip good" id="tempState">Normal</span><span class="source">DHT11 · GPIO 4</span></div><div class="sparkline orange-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="metric-card humidity-card"><div class="metric-top"><span class="metric-label">HUMIDITY</span><span class="metric-icon blue">◌</span></div><div class="metric-value"><span id="humidity">55.0</span><small>%</small></div><div class="metric-bottom"><span class="state-chip good" id="humidityState">Comfortable</span><span class="source">DHT11 · GPIO 4</span></div><div class="sparkline blue-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="metric-card object-card"><div class="metric-top"><span class="metric-label">ROOM ENTRY</span><span class="metric-icon violet">⌁</span></div><div class="metric-value word-value" id="objectDetected">CLEAR</div><div class="metric-bottom"><span class="state-chip neutral" id="objectState">No entry detected</span><span class="source">IR sensor · GPIO 18</span></div><div class="detection-track"><span id="objectBar"></span></div></article>
+        <article class="metric-card ac-card"><div class="metric-top"><span class="metric-label">AC CONTROL</span><span class="metric-icon teal">❄</span></div><div class="metric-value word-value" id="acStatus">OFF</div><div class="metric-bottom"><span class="state-chip neutral" id="acState">Room empty</span><span class="source">IR-controlled status</span></div><div class="detection-track"><span id="acBar"></span></div></article>
+      </section>
+
+      <section class="content-grid" id="trends">
+        <article class="panel chart-panel"><div class="panel-heading"><div><h3>DHT11 trends</h3><p>Temperature and humidity history</p></div><span class="chart-legend"><i class="legend-temp"></i> Temp <i class="legend-humidity"></i> Humidity</span></div><div class="chart-wrap"><canvas id="environmentChart"></canvas></div></article>
+        <article class="panel status-panel"><div class="panel-heading"><div><h3>AC status</h3><p>Automatic control summary</p></div><span class="health-icon">❄</span></div><div class="health-status"><div class="health-check">✓</div><div><b id="environmentHealth">Temperature normal</b><span id="acSummary">AC is off because the room is empty</span></div></div><div class="threshold-row"><span>Person detected</span><b>AC ON</b></div><div class="threshold-row"><span>No person detected</span><b>AC OFF</b></div></article>
+      </section>
+
+      <section class="panel table-panel" id="readings"><div class="panel-heading"><div><h3>Recent room readings</h3><p>Latest readings from Room 01</p></div><span class="small-tag">SENSOR HISTORY</span></div><div class="table-scroll"><table><thead><tr><th>TIME</th><th>TEMPERATURE</th><th>HUMIDITY</th><th>ROOM ENTRY</th><th>AC STATUS</th></tr></thead><tbody id="readingsTable"></tbody></table></div></section>
+      <footer><span>Smart AC System</span><span><b>SENSORS:</b> DHT11 · IR</span></footer>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

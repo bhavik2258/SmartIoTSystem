@@ -1,0 +1,66 @@
+1793951428: mosquitto version 2.1.2 starting
+1793951428: Config loaded from /mosquitto/config/mosquitto.conf.
+1793951428: Bridge support available.
+1793951428: Persistence support available.
+1793951428: TLS support available.
+1793951428: TLS-PSK support available.
+1793951428: Websockets support available.
+1793951428: Opening ipv4 listen socket on port 1883.
+1793951428: mosquitto version 2.1.2 running
+1793953229: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793955030: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793957972: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793959773: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793961574: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793961943: New connection from 172.18.0.4:55121 on port 1883.
+1793961943: New client connected from 172.18.0.4:55121 as odroid-classroom-subscriber (p4, c1, k60).
+1793961992: New connection from 127.0.0.1:39420 on port 1883.
+1793961992: New client connected from 127.0.0.1:39420 as auto-246D2896-653A-B9B9-E145-52F98BBA71B7 (p4, c1, k60).
+1793961992: Client auto-246D2896-653A-B9B9-E145-52F98BBA71B7 [127.0.0.1:39420] disconnected.
+1793962806: New connection from 192.168.65.1:25559 on port 1883.
+1793962806: New client connected from 192.168.65.1:25559 as esp32-smart-ac-room-01 (p4, c1, k15).
+1793962846: New connection from 192.168.65.1:41929 on port 1883.
+1793962846: Client 192.168.65.1 [192.168.65.1:41929] disconnected: connection closed by client.
+1793963249: Client esp32-smart-ac-room-01 [192.168.65.1:25559] disconnected: exceeded timeout.
+1793963274: New connection from 192.168.65.1:23646 on port 1883.
+1793963274: New client connected from 192.168.65.1:23646 as esp32-smart-ac-room-01 (p4, c1, k15).
+1793963342: Client esp32-smart-ac-room-01 [192.168.65.1:23646] disconnected: exceeded timeout.
+1793963375: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793969158: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1793975300: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1794020825: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1794026892: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1794028849: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1794029326: mosquitto version 2.1.2 terminating
+1794029326: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1794036573: mosquitto version 2.1.2 starting
+1794036573: Config loaded from /mosquitto/config/mosquitto.conf.
+1794036573: Bridge support available.
+1794036573: Persistence support available.
+1794036573: TLS support available.
+1794036573: TLS-PSK support available.
+1794036573: Websockets support available.
+1794036573: Opening ipv4 listen socket on port 1883.
+1794036573: mosquitto version 2.1.2 running
+1794036611: New connection from 192.168.65.1:22058 on port 1883.
+1794036611: Protocol error from 192.168.65.1:22058: First packet not CONNECT (47).
+1794036611: Client 192.168.65.1 [192.168.65.1:22058] disconnected: protocol error.
+1794036611: New connection from 192.168.65.1:32750 on port 1883.
+1794036612: Protocol error from 192.168.65.1:32750: First packet not CONNECT (47).
+1794036612: Client 192.168.65.1 [192.168.65.1:32750] disconnected: protocol error.
+1794036612: New connection from 192.168.65.1:56857 on port 1883.
+1794036612: Protocol error from 192.168.65.1:56857: First packet not CONNECT (47).
+1794036612: Client 192.168.65.1 [192.168.65.1:56857] disconnected: protocol error.
+1794036612: New connection from 192.168.65.1:54459 on port 1883.
+1794036612: Protocol error from 192.168.65.1:54459: First packet not CONNECT (47).
+1794036612: Client 192.168.65.1 [192.168.65.1:54459] disconnected: protocol error.
+1794036613: New connection from 192.168.65.1:18198 on port 1883.
+1794036613: Protocol error from 192.168.65.1:18198: First packet not CONNECT (47).
+1794036613: Client 192.168.65.1 [192.168.65.1:18198] disconnected: protocol error.
+1794036618: New connection from 192.168.65.1:22043 on port 1883.
+1794036618: New connection from 192.168.65.1:21227 on port 1883.
+1794036618: Protocol error from 192.168.65.1:22043: First packet not CONNECT (47).
+1794036618: Client 192.168.65.1 [192.168.65.1:22043] disconnected: protocol error.
+1794036648: Client 192.168.65.1 [192.168.65.1:21227] disconnected: exceeded timeout.
+1794036732: mosquitto version 2.1.2 terminating
+1794036732: Saving in-memory database to /mosquitto/data//mosquitto.db.
